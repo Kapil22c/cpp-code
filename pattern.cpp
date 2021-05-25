@@ -15,10 +15,65 @@ void print(int i,int n){
 	cout<<endl;
 }
 int main(){
+	// int n;
+	// cin>>n;
+	// for(int i =1; i<=n; i++){
+	// 	print(i, n);
+		
+	// }
 	int n;
 	cin>>n;
-	for(int i =1; i<=n; i++){
-		print(i, n);
-		
+	//print the pattern
+	//first component
+	cout<<"*";
+	for(int i=1; i<=(n-3)/2; i++){
+		cout<<" ";
 	}
+	for(int i=1; i<=(n+1)/2; i++){
+		cout<<"*";
+	}
+	cout<<endl;
+	//second component
+	for(int i=1; i<=(n-3)/2; i++){
+		cout<<"*";
+		//spaces
+		for(int j =1; j<=(n-3)/2; j++){
+			cout<<" ";
+		}
+		//star
+		cout<<"*"<<endl;
+	}
+	//third component
+	for(int i=1; i<=n; i++){
+		cout<<"*";
+	}
+	cout<<endl;
+	//fourth component
+		//space
+	for(int row=1; row<=(n-3)/2; row++){
+		for(int i=1; i<=(n-3)/2 + 1; i++){
+			cout<<" ";
+		}
+		//star
+		cout<<"*";
+		//spaces
+		for(int i=1; i<=(n-3)/2; i++){
+			cout<<" ";
+		}
+
+		//star
+		cout<<"*"<<endl;
+	}
+	//fifth component
+	//star
+	for(int i=1; i<=(n+1)/2; i++){
+		cout<<"*";
+	}
+	//spaces
+	for(int i=1; i<=(n-3)/2; i++){
+		cout<<" ";
+	}
+	//star
+	cout<<"*"<<endl;
+	return 0;
 }
